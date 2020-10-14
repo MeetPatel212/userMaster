@@ -1,0 +1,52 @@
+<section>
+    <nav class="menu Items">
+        <li><a routerLink="/Login" routerLinkActive="active">Logout</a></li> 
+    </nav>
+  </section>
+<div>
+    <div class="col-md-2"></div>
+     <div class="col-md-8 mb-7">
+         <div class="card">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">First Name</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.firstname}}</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">Last Name</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.lastname}}</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">Gender</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.gender}}</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">Email</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.email}}</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">Mobile No : </h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.mobileNo}}</div>
+                    </div>
+                   <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">Address</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.address}}</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3"><h6 class="mb-0">City</h6></div>
+                        <div class="col-sm-9 text-secondary"> {{data.city}}</div>
+                    </div>
+                </div>
+            </div>
+                <a [routerLink]="['/Profile']" class="btn btn-block btn-lg btn-info">Update Profile</a>
+          
+        </div>
+    </div>
+</div>

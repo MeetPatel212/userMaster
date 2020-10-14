@@ -1,0 +1,124 @@
+<div class="auth-wrapper-reg  d-flex no-block justify-content-center align-items-center">
+    <div class="auth-box">
+     <div class="textalign"><h1>Registration</h1></div>   
+        <div class="row">
+            <div class="col-12">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-group input-group colmd5">
+                            
+                            <input type="text" formControlName="firstname" placeholder="First Name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.firstname.errors}" />
+                            <div *ngIf="f.firstname.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstname.errors.required"> First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group input-group colmd5">
+                            
+                            <input type="text" formControlName="lastname" placeholder="Last Name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.lastname.errors}" />
+                            <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                                <div *ngIf="f.lastname.errors.required"> Last Name is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group colmd5">
+                                    Gender: 
+                          <input type="radio" formControlName="gender" value="male" class="input-radio" checked
+                              />  Male
+                          <input type="radio" formControlName="gender" value="female" class="input-radio"
+                               />  Female
+                        </div>
+                        
+                        <div class="form-group input-group colmd5 ">
+                           
+                            <input type="text" formControlName="email" placeholder="Email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Email Id is required</div>
+                                <div *ngIf="f.email.errors.email">Invalid Email Id</div>
+                            </div>
+                        </div>
+                        <div class="form-group input-group colmd5 ">
+                            
+                            <input type="number" formControlName="mobileNo" placeholder="MobileNo" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" />
+
+                            <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobileNo.errors.required">Mobile No is required</div>
+                                <div *ngIf="f.mobileNo.errors.pattern">Invalid Mobile No</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group colmd5">
+                            
+                            <select id="city" formControlName="city" class="form-control" placeholder="City"
+                                [ngClass]="{ 'is-invalid': submitted && f.city.errors}">
+                                <option value="" disabled selected>Select City</option>
+                                <option>Rajkot</option>
+                                <option>Ahmedabad</option>
+                                <option>Mumbai</option>
+                        </select>
+                            <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                <div *ngIf="f.city.errors.required"> Select City</div>
+                            </div>
+    
+                        </div>
+
+                        <div class="form-group input-group colmd5">
+                            
+                            <input type="text" formControlName="address" placeholder="Address" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                            <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                <div *ngIf="f.address.errors.required">Address field required</div>
+
+                            </div>
+                              
+                        </div>
+                        <div class="form-group input-group colmd5 ">
+                      
+                            <input type="password" formControlName="password" placeholder="Password"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+    
+                        </div>
+                        <div class="form-group input-group colmd5">
+                          
+                            <input type="password" formControlName="confirmPassword" placeholder="Confirm password"
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                            <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                                <div *ngIf="f.confirmPassword.errors.required">Password is required</div>
+                                <div *ngIf="f.confirmPassword.errors.minlength">Password must be at least 6 characters
+                                </div>
+    
+                            </div>
+                            <div *ngIf="confirmP" class="invalid-feedback">
+                                <label>doesn't match</label> </div>
+    
+                        </div>
+                    </div>
+                  
+                    <div class="form-group text-center">
+                        <div class="col-xs-12 p-b-20">
+                            <button [disabled]="loading" class="btn btn-block btn-lg btn-info">Register</button>
+                            <img *ngIf="loading"
+                                src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        </div>
+                       <a [routerLink]="['/Login']" class="btn btn -link">Cancel</a>
+                    </div>
+                  
+                </form>
+               
+
+            </div>
+            <div *ngIf="isError" class="errormessage">
+                <label>{{error}}</label>
+             </div>
+            </div>
+        </div>
+
+</div>

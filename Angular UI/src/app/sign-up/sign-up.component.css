@@ -1,0 +1,206 @@
+/* You can add global styles to this file, and also import other style files */
+
+input[type="file"] { 
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+  }
+
+.textalign{
+    text-align: center;
+}
+
+.auth-box{
+    background: #fff;
+    padding: 20px;
+    width: 56%;
+    margin: 1% 0px 0px 3%;
+    border-radius: 5px
+}
+
+a {
+    text-decoration: none;
+    color: forestgreen;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: bold;
+  }
+  .active{
+    color: green;
+  }
+  .menu{
+    background-color: black;
+  }
+  .Items {
+    display: flex;
+  }
+  li {
+    margin: 14px;
+  }
+  
+.auth-box-login{
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    margin: 1% 0px 0px 3%;
+    border-radius: 5px
+}
+.logo{
+    text-align: center;
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+.form-control{
+    font-size: 14px;
+    height: 35px;
+}
+.text-dark{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+input{
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.input-radio{
+    margin-left: 50px;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 48%;
+    margin-left: 4px;
+  
+}
+.input-group-prepend {
+    margin-right: -1px;
+    width: 41px;
+}
+.errormessage{
+color: red;
+align-content: center;
+margin-left: 36%;
+padding: 1px;
+font-size: large;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #4f5467;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    width: 100%;
+    height:35px
+} [class^=ti-] {
+    font-family: themify;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.ti-user:before {
+    content: "\e602";
+}
+.btn-info{
+    background-color: #003366;
+    border-color: #003366;
+}
+.btn-info:hover{
+    background-color: #2F2F2F;
+    border-color: #2F2F2F;
+}
+.jumbotronz1{
+    background-color: transparent
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.mb-3{
+    margin-bottom: 1rem!important;
+}
+ng-component{
+    width: 100%
+}
+app-forgot-password,app-change-password,app-vehical-details
+{
+    width: 100%
+}
+@media only screen and (min-width:0px)
+{
+    [class="invalid-feedback"]{
+        margin-left: 10%
+    }
+}
+i{
+    color: black;
+    font-size: 15px
+}
+.input-group-text
+{
+    background-color: #003366;
+    border: 1px solid #003366;
+}
+.otp{
+    margin: 0 5px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        border: solid 1px #ccc;
+        box-shadow: 0 0 5px #ccc inset;
+        outline: none;
+        width: 10%;
+        transition: all .2s ease-in-out;
+        border-radius: 3px;
+}
+.showotp{
+width: 100%
+}
+
+.otp:focus{
+    box-shadow: 0 0 5px #F48147
+}
+::placeholder{
+    color: #566573
+}
+.colmd6
+{
+    flex: 0 0 50% ;
+    max-width: 50%;
+}
+@media screen and (max-width: 500px) {
+    .auth-box{
+        width: auto;
+        margin: 1% 5% 1% 2% !important;
+        height: fit-content !important;
+
+    }
+  
+    .colmd6{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+i{
+    color: whitesmoke
+}

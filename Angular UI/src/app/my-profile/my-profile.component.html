@@ -1,0 +1,114 @@
+<section>
+  <nav class="menu Items">
+      <li><a routerLink="/Login" routerLinkActive="active">Logout</a></li> 
+  </nav>
+</section>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-9 personal-info">
+      <h3>Personal info</h3>
+      
+    
+      <form class="form-horizontal" role="form" [formGroup]="updateProfile" (ngSubmit)="onSubmit()">
+      <table class="profiletable">  
+        <td>
+        </td>
+
+        <td>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First Name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" formControlName="firstname"
+              [ngClass]="{ 'is-invalid': submitted && this.updateProfile.controls.firstname.errors }">
+            <div *ngIf="submitted && this.updateProfile.controls.firstname.errors" class="invalid-feedback">
+              <div *ngIf="this.updateProfile.controls.firstname.errors.required">First Name is Required</div>
+              <div *ngIf="this.updateProfile.controls.firstname.errors.minLength">Minimum Length should be 3</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First Name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" formControlName="lastname"
+              [ngClass]="{ 'is-invalid': submitted && this.updateProfile.controls.lastname.errors }">
+            <div *ngIf="submitted && this.updateProfile.controls.lastname.errors" class="invalid-feedback">
+              <div *ngIf="this.updateProfile.controls.lastnameerrors.required">First Name is Required</div>
+              <div *ngIf="this.updateProfile.controls.lastname.errors.minLength">Minimum Length should be 3</div>
+            </div>
+          </div>
+        </div>
+       
+<div class="form-group">
+  <label class="col-lg-3 control-label">Gender:</label>
+  <div class="col-lg-8">
+    <input type="radio" formControlName="gender" value="male" class="input-radio" checked
+        />  Male
+    <input type="radio" formControlName="gender" value="female" class="input-radio"
+         />  Female
+    <div *ngIf="submitted && this.updateProfile.controls.gender.errors" class="invalid-feedback">
+      <div *ngIf="this.updateProfile.controls.gender.errors.required">Select Gender</div>
+    </div>
+  </div>
+</div>
+                            <div class="form-group">
+                              <label class="col-lg-3 control-label">Email :</label>
+                              <div class="col-lg-8">
+                                <input type="text" formControlName="email" placeholder="Email" class="form-control" disabled/>
+                              </div>
+                            </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Mobile No :</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" formControlName="mobileNo"
+              [ngClass]="{ 'is-invalid': submitted && this.updateProfile.controls.mobileNo.errors }">
+            <div *ngIf="submitted && this.updateProfile.controls.mobileNo.errors" class="invalid-feedback">
+              <div *ngIf="this.updateProfile.controls.mobileNo.errors.required">Mobile No is Required</div>
+              <div *ngIf="this.updateProfile.controls.mobileNo.errors.pattern">Invalid Mobile Number</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">City :</label>
+          <div class="col-lg-8">
+            <select id="city" formControlName="city" class="form-control" placeholder="City"
+            [ngClass]="{ 'is-invalid': submitted && this.updateProfile.controls.city.errors}">
+            <option>Rajkot</option>
+            <option>Ahmedabad</option>
+            <option>Mumbai</option>
+           </select>
+            <div *ngIf="submitted && this.updateProfile.controls.city.errors " class="invalid-feedback">
+              <div *ngIf="this.updateProfile.controls.city.errors required"> Select City</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Address :</label>
+          <div class="col-lg-8">
+            <input class="form-control" type="text" formControlName="address"
+              [ngClass]="{ 'is-invalid': submitted && this.updateProfile.controls.address.errors }">
+            <div *ngIf="submitted && this.updateProfile.controls.address.errors" class="invalid-feedback">
+              <div *ngIf="this.updateProfile.controls.address.errors.required">Address is Required</div>
+            </div>
+          </div>
+        </div>
+       
+      
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <button type="submit" class="btn btn-primary" id="changeButton" value="Save Changes">Save Changes</button>
+
+            <input type="button" class="btn btn-default" value="Reset" id="resetButton" (click)="reset()">
+            <a class="btn btn-default btnlink" routerLink="/Dashboard" routerLinkActive="active">Cancel</a>
+            
+          </div>
+        </div>
+        </td>
+      </table>
+      </form>
+     
+    </div>
+  </div>
+</div>
+

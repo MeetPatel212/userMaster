@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+.auth-box{
+    background: #fff;
+    padding: 20px;
+    width: 40%;
+    border-radius: 5px
+}
+.textalign{
+    text-align: center;
+}
+.auth-box-login{
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    margin: 1% 0px 0px 3%;
+    border-radius: 5px
+}
+.errormessage{
+    color: red;
+    align-content: center;
+    margin-left: 36%;
+    padding: 1px;
+    font-size: large;
+    }
+.logo{
+    text-align: center;
+    
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+.form-control{
+    font-size: 14px;
+    height: 35px;
+    
+}
+.fa-user:before {
+    padding:2px
+}
+.fa-unlock:before{
+    padding:2px
+}
+.text-dark{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+input{
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group-prepend {
+    margin-right: -1px;
+    width: 41px;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #4f5467;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    width: 100%;
+    height:35px
+} [class^=ti-] {
+    font-family: themify;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.ti-user:before {
+    content: "\e602";
+}
+.btn-info{
+    background-color: #003366;
+    border-color: #003366;
+}
+.btn-info:hover{
+    background-color: #2F2F2F;
+    border-color: #2F2F2F;
+}
+.jumbotronz1{
+    background-color: transparent
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.mb-3{
+    margin-bottom: 1rem!important;
+}
+ng-component{
+    width: 100%
+}
+app-forgot-password,app-change-password,app-vehical-details
+{
+    width: 100%
+}
+@media only screen and (min-width:0px)
+{
+    [class="invalid-feedback"]{
+        margin-left: 10%
+    }
+}
+i{
+    color: black;
+    font-size: 15px
+}
+.input-group-text
+{
+    background-color: #003366;
+    border: 1px solid #003366;
+}
+.otp{
+    margin: 0 5px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        border: solid 1px #ccc;
+        box-shadow: 0 0 5px #ccc inset;
+        outline: none;
+        width: 10%;
+        transition: all .2s ease-in-out;
+        border-radius: 3px;
+}
+.showotp{
+width: 100%
+}
+
+.otp:focus{
+    box-shadow: 0 0 5px #F48147
+}
+.social{
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* margin-left:15% */
+    text-align:center
+}
+.displayinline
+{
+    display:inline
+}
+.fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+.btn-google {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: rgba(0,0,0,.2);
+}
+.btn-social-icon {
+    position: relative;
+    text-align: left;
+    height: 34px;
+    width: 34px;
+    padding: 0;
+}
+.btn-social-icon>:first-child {
+    border: none;
+    text-align: center;
+    width: 100%!important;
+}
+.btn-social-icon>:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 34px;
+    font-size: 1.6em;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.btn-linkedin {
+    color: #fff;
+    background-color: #007bb6;
+    border-color: rgba(0,0,0,.2);
+}
+::placeholder{
+    color: #566573
+}
+
+@media screen and (max-width: 1023px) {
+    .auth-box-login{   
+        width: auto;
+        margin: 0% 3% 3% 3%;
+    }
+}
+@media screen and (min-width:1025px){
+    .auth-box-login{
+        width: 28%;
+        margin: -3% 0px 0px 3%;
+    }
+}
+@media screen and (min-width:700px) and (max-width:750px){
+    .auth-box-login{
+        height: 428px;
+        margin: -1% 3% 3% 3%;
+    }
+}
+@media screen and (min-width:750px) and (max-width:800px){
+    .auth-box-login{
+        width: 50%;
+        margin: 7% 0px 0px 3%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .auth-box-login{
+        width: auto;
+        margin: 3% 3% 3% 3%;
+    }
+    .social{
+      margin:0% 16% 0% 20%;
+    } 
+}   
+@media screen and (max-width: 320px){
+    .auth-box-login{
+        width: auto;
+        margin: 3% 3% 3% 3%;
+    }
+    .social{
+      margin:0% 15% 0% 20%;
+    }
+   
+    
+}
+.loading
+{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    margin-top:5px;
+}
+i{
+    color: whitesmoke
+}
+
+   
+
+   
